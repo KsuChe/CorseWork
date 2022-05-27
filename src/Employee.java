@@ -3,7 +3,7 @@ public class Employee {
     private int department;
     private int salary;
     private int id;
-    private static int idCounter = 0;
+    private static int idCounter = 1;
 
     public Employee(String Name, int department, int salary) {
         id = idCounter++;
