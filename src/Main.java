@@ -32,24 +32,29 @@ public class Main<list> {
     }
 
     public static void maxSalary(Employee[] list) {
-        int maxSalary = 150000;
+        int maxSalary = 50000;
+        String name = null;
         for (int i = 0; i < list.length; i++) {
-            if (list[i].getSalary() < maxSalary) {
+            if (list[i].getSalary() > maxSalary) {
                 maxSalary = list[i].getSalary();
+                name = list[i].getName();
+
             }
         }
 
-        System.out.println(maxSalary);
+        System.out.println("Максимальная зарплата у сотрудника " + name +" составляет " + maxSalary);
     }
 
     public static void minSalary(Employee[] list) {
-        int minSalary = 50000;
+        int minSalary = 150000;
+        String name = null;
         for (int i = 0; i < list.length; i++) {
-            if (list[i].getSalary() > minSalary) {
+            if (list[i].getSalary() < minSalary) {
                 minSalary = list[i].getSalary();
+                name= list[i].getName();
             }
             }
-        System.out.println(minSalary);
+        System.out.println("Минимальная зарплата у сотрудника " + name + " составляет " + minSalary);
         }
     }
 
