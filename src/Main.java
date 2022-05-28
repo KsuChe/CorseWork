@@ -1,3 +1,5 @@
+import javax.lang.model.element.Name;
+
 public class Main<list> {
 
     public static void main(String[] args) {
@@ -6,7 +8,7 @@ public class Main<list> {
         list[0] = new Employee("Ivanov Ivan Ivanovich", 1, 91455);
         list[1] = new Employee("Ivanov1 Ivan1 Ivanovich1", 2, 78455);
         list[2] = new Employee("Ivanov2 Ivan2 Ivanovich2", 3, 95999);
-        list[3] = new Employee("Ivanov3 Ivan3 Ivanovich3", 1, 68445);
+        list[3] = new Employee("Ivanov3 Ivan3 Ivanovich3", 1, 168445);
         list[4] = new Employee("Ivanov4 Ivan4 Ivanovich4", 5, 101455);
         list[5] = new Employee("Ivanov5 Ivan5 Ivanovich5", 4, 91578);
         list[6] = new Employee("Ivanov6 Ivan6 Ivanovich6", 1, 85785);
@@ -15,8 +17,11 @@ public class Main<list> {
         list[9] = new Employee("Ivanov9 Ivan9 Ivanovich9", 4, 61415);
         for (Employee i : list) {
             System.out.println(i + " ");
-            System.out.println();
+            System.out.println();}
+        for (Employee i : list) {
+            System.out.println(i.getName());
         }
+
         salarySum(list);
         minSalary(list);
         maxSalary(list);
@@ -33,8 +38,8 @@ public class Main<list> {
             average = sum/ list.length;
         }
 
-        System.out.println("Сумма затрат на зарплаты за месяц " +sum);
-        System.out.println("Средняя сумма трат за месяц " + average);
+        System.out.println("Сумма затрат на зарплаты за месяц: " + sum);
+        System.out.println("Среднее значение зарплат за месяц: " + average);
     }
 
     public static void maxSalary(Employee[] list) {
@@ -48,11 +53,11 @@ public class Main<list> {
             }
         }
 
-        System.out.println("Максимальная зарплата у сотрудника " + name +" составляет " + maxSalary);
+        System.out.println("Максимальная зарплата у сотрудника: " + name +" составляет: " + maxSalary);
     }
 
     public static void minSalary(Employee[] list) {
-        int minSalary = 150000;
+        int minSalary = 200000;
         String name = null;
         for (int i = 0; i < list.length; i++) {
             if (list[i].getSalary() < minSalary) {
@@ -60,7 +65,7 @@ public class Main<list> {
                 name= list[i].getName();
             }
             }
-        System.out.println("Минимальная зарплата у сотрудника " + name + " составляет " + minSalary);
+        System.out.println("Минимальная зарплата у сотрудника: " + name + " составляет: " + minSalary);
         }
     }
 
