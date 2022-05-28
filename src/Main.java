@@ -25,10 +25,16 @@ public class Main<list> {
 
     public static void salarySum(Employee[] list) {
         int sum = 0;
-        for (int i = 0; i < list.length; i++) {
-            sum += list[i].getSalary();
+        double average = 0;
+        if (list.length > 0) {
+            for (int i = 0; i < list.length; i++) {
+                sum += list[i].getSalary();
+            }
+            average = sum/ list.length;
         }
-        System.out.println(sum);
+
+        System.out.println("Сумма затрат на зарплаты за месяц " +sum);
+        System.out.println("Средняя сумма трат за месяц " + average);
     }
 
     public static void maxSalary(Employee[] list) {
